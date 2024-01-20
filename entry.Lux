@@ -1,0 +1,5 @@
+.start.
+
+
+:print:("hello");
+list foo = [1, 2, 3];
