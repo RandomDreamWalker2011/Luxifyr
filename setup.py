@@ -7,5 +7,5 @@ class Luxifyr_Interpreter:
 
     def run(self, file):
         tokens = file.splitline("\n")
-        for token in tockens:
+        for token in tokens:
             print("token")
