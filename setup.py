@@ -6,6 +6,6 @@ class Luxifyr_Interpreter:
         self.variables = {}
 
     def run(self, file):
-        tokens = file.splitline("\n")
+        tokens = file.splitlines("\n")
         for token in tokens:
             print("token")
