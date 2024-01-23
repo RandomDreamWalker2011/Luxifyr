@@ -1,30 +1,17 @@
-# setup.py
-Tokens = {}
+# INTERPRETER
+from setup import LuxifyrInterpreter as LuxI, Tokens
+interpreter = LuxI()
 
 
-class Token:
-    name = None
+file_path = 'entry.lux'
 
-    def __init__(self, type, value):
-        self.type = type
-        self.value = value
-        self.variable = False
+try:
+    with open(file_path, 'r') as file:
+        # Read the entire content
+        content = file.read()
+except FileNotFoundError:
+    print(f"The file '{file_path}' does not exist.")
 
-    def set_variable(self, name):
-        self.name = name
-        self.variable = True
-
-
-class LuxifyrInterpreter:
-    def __init__(self):
-        self.variables = {}
-
-    @staticmethod
-    def run(file):
-        tokens = file.split()
-        for token in tokens:
-            print(token)
-
-    @staticmethod
-    def breakdown(tokens):
-        pass
+interpreter = interpreter.run(content)
+if interpreter is not None:
+    pass
