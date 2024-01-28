@@ -12,6 +12,7 @@ try:
 except FileNotFoundError:
     print(f"The file '{file_path}' does not exist.")
 
-interpreter = interpreter.run(content)
+x = interpreter.run(content)
+interpreter.breakdown("log(\"hello\"")
 if interpreter is not None:
     pass
