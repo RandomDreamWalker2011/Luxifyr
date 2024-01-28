@@ -3,7 +3,7 @@ from setup import LuxifyrInterpreter as LuxI, Tokens
 interpreter = LuxI()
 
 
-file_path = 'entry.lux'
+file_path = 'entry.lxf'
 
 try:
     with open(file_path, 'r') as file:
