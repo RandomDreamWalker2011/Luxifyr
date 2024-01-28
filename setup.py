@@ -5,8 +5,8 @@ Tokens = {}
 class Token:
     name = None
 
-    def __init__(self, type, value):
-        self.type = type
+    def __init__(self, object_type, value):
+        self.type = object_type
         self.value = value
         self.variable = False
 
@@ -21,10 +21,22 @@ class LuxifyrInterpreter:
 
     @staticmethod
     def run(file):
-        tokens = file.split()
+        tokens = file.split(";")
         for token in tokens:
             print(token)
+        return tokens
 
     @staticmethod
-    def breakdown(tokens):
-        pass
+    def breakdown(token):
+        """
+        token = token.strip()
+        if token[:2] == "/*" and token[len(token) - 2:] == "*/":
+            return "Comment found"""""
+        comment_start = []
+        function_runs = {}
+        if token.startswith("log"):
+            if token.endswith(";"):
+                print(token[3:1])
+
+    def log(self, input_operation):
+        print(input_operation)
